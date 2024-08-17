@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Figma-2</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <div class="s1">
+          <div>
+            <img src="assets/grain.svg" class="grain" />
+            <span>E-Dashboard</span>
+          </div>
+          <img src="assets/menu_open.svg" class="menu_o" onclick="toggleSidebar()"/>
+          <img src="assets/menu.svg" class="menu_expand" onclick="toggleSidebar()"/>
+        </div>
+        <img src="assets/menu_open.svg" alt="" class="menu_close" onclick="toggleSidebarm()">
+        <div class="s2">
+          <img src="assets/avatar.svg" alt="" />
+          <select>
+            <option value="alpha">Alphalinx inc.</option>
+          </select>
+        </div>
+        <div class="s3">
+          <img src="assets/widgets.svg" />
+          <span>Dashboard</span>
+        </div>
+        <div class="s4">
+          <img src="assets/add_chart.svg" />
+          <select name="" id="">
+            <option value="">My Business</option>
+          </select>
+        </div>
+        <div class="s5">
+          <img src="assets/request_quote.svg" />
+          <select name="" id="">
+            <option value="">Financial Resources</option>
+          </select>
+        </div>
+        <div class="s6">
+          <img src="assets/unsubscribe.svg" alt="" />
+          <span>Mailbox</span>
+        </div>
+        <div class="s7">
+          <img src="assets/airplane_ticket.svg" alt="" />
+          <span>Visa Center</span>
+        </div>
+        <div class="s8">
+          <img src="assets/quiz.svg" alt="" />
+          <span>Compliance</span>
+          <p>02</p>
+        </div>
+        <div class="sidebar-end">
+          <div class="s-noti">
+            <img src="assets/notifications.svg" />
+            <p>Notifications</p>
+          </div>
+          <div class="s-help">
+            <img src="assets/help.svg" />
+            <p>Help Center</p>
+            <img src="assets/expand_more.svg" alt="" class="expand" />
+          </div>
+          <div class="s-user">
+            <img src="assets/company.svg" />
+            <div class="user-info">
+              <span>Jacobe James</span>
+              <p>jacobejames@gmail.com</p>
+            </div>
+            <div class="expand_user">
+              <img src="assets/expand_more.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="m-navbar">
+        <div class="nav">
+          <img src="assets/grain.svg" alt="" class="grain" />
+          <span>E-Dashboard</span>
+          <img src="assets/menu.svg" alt="" class="menu" onclick="toggleSidebarm()"/>
+        </div>
+      </div>
+      <div class="middle">
+        <div class="gm-name">
+          Good morning,
+          <span>Emily!</span>
+          <img src="assets/hi_emote.svg" alt="" />
+        </div>
+        <span class="mspan">Welcome back!</span>
+        <div class="document-status-container">
+          <img src="./assets/m_1.svg" alt="Card-Checked" class="card-checked" />
+          <h2>
+            All your <span class="documents-span1">documents</span> are
+            <span class="documents-span2">up to date!</span>
+          </h2>
+          <!-- Horizontal Line -->
+          <span class="horizontal-line"></span>
+          <p>
+            You have 3 upcoming document updates in January.
+            <button class="next-button">
+              <span class="arrow">&gt;</span>
+            </button>
+          </p>
+          <img src="./assets/m3.svg" alt="Stars Icon" class="stars-icon" />
+        </div>
+
+        <!-- --doughnut chart-- -->
+        <div class="gradient-rectangle-2">
+          <div class="doughnut-chart-container">
+            <canvas id="doughnutChart"></canvas>
+            <div id="doughnut-chart-text">Applications</div>
+          </div>
+          <ul class="application-status">
+            <li class="application-status-content">
+              <span
+                class="color-indicator"
+                style="background-color: #ffa500"
+              ></span>
+              Incomplete
+            </li>
+            <li class="application-status-content">
+              <span
+                class="color-indicator"
+                style="background-color: #ff6347"
+              ></span>
+              Pending approval
+            </li>
+            <li class="application-status-content">
+              <span
+                class="color-indicator"
+                style="background-color: #32cd32"
+              ></span>
+              Approved
+            </li>
+          </ul>
+        </div>
+        <div class="mailbox">
+          <h2>
+            Mailbox<span class="mail-1"><a href="#">View all</a></span>
+          </h2>
+          <p class="mail-2">Check on your all your mail in one go.</p>
+          <div class="mail-info">
+            <div class="new">
+              <img src="assets/mail_new.svg" />
+              <span class="new1">New</span>
+              <span class="new2">23</span>
+            </div>
+            <span class="vertical-line1"></span>
+            <div class="req">
+              <img src="assets/req.svg" />
+              <span class="req1">Requested</span>
+              <span class="req2">23</span>
+            </div>
+            <span class="vertical-line1"></span>
+            <div class="actions">
+              <img src="assets/actions.svg" />
+              <span class="actions1">Actions taken</span>
+              <span class="actions2">23</span>
+            </div>
+          </div>
+        </div>
+        <div class="legal-compliance">
+          <h2>
+            Legal compliance<span class="lc-1"><a href="#">View all</a></span>
+          </h2>
+          <p class="lc-2">Keep your requirements up to date.</p>
+          <div class="lc-info">
+            <div class="rem">
+              <img src="assets/mail_new.svg" />
+              <span class="rem1">Reminders</span>
+              <span class="rem2">23</span>
+            </div>
+            <span class="vertical-line2"></span>
+            <div class="prog">
+              <img src="assets/req.svg" />
+              <span class="prog1">In progress</span>
+              <span class="prog2">23</span>
+            </div>
+            <span class="vertical-line2"></span>
+            <div class="approve">
+              <img src="assets/actions.svg" />
+              <span class="approve1">To approve</span>
+              <span class="approve2">23</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="task">
+          <h1>
+            Tasks<span><a href="#">View all</a></span>
+          </h1>
+          <div class="task-menu">
+            <ul>
+              <li>My tasks</li>
+              <li>Overdue</li>
+              <li>Assigned by me</li>
+            </ul>
+          </div>
+          <span class="hr-line"></span>
+          <div class="task-m">
+            <div class="task1">
+              <h2>Update Tax Document for Alphalinx...</h2>
+              <div class="task1-text">
+                <div class="text-1">
+                  <div>
+                    <span>Category</span>
+                    <p>Compliance</p>
+                  </div>
+                  <div>
+                    <span>Due date</span>
+                    <p>23/11/23</p>
+                  </div>
+                </div>
+                <span style="margin-top: 16px">Status </span>
+                <p class="s">Request sent</p>
+              </div>
+            </div>
+            <span class="hr-line"></span>
+            <div class="task1">
+              <h2>Update KYC document</h2>
+              <div class="task1-text">
+                <div class="text-1">
+                  <div>
+                    <span>Category</span>
+                    <p>Compliance</p>
+                  </div>
+                  <div>
+                    <span>Due date</span>
+                    <p>23/11/23</p>
+                  </div>
+                </div>
+                <span style="margin-top: 16px">Status </span>
+                <p class="s">Request sent</p>
+              </div>
+            </div>
+            <span class="hr-line"></span>
+            <div class="task1">
+              <h2>Add clearer photo for visa application</h2>
+              <div class="task1-text">
+                <div class="text-1">
+                  <div>
+                    <span>Category</span>
+                    <p>Visa Center</p>
+                  </div>
+                  <div>
+                    <span>Due date</span>
+                    <p>23/11/23</p>
+                  </div>
+                </div>
+                <span style="margin-top: 16px">Status </span>
+                <p class="s">Pending action</p>
+              </div>
+            </div>
+            <span class="hr-line"></span>
+            <div class="task1">
+              <h2>Document not clear: please add new file</h2>
+              <div class="task1-text">
+                <div class="text-1">
+                  <div>
+                    <span>Category</span>
+                    <p>Visa Center</p>
+                  </div>
+                  <div>
+                    <span>Due date</span>
+                    <p>23/11/23</p>
+                  </div>
+                </div>
+                <span style="margin-top: 16px">Status </span>
+                <p class="s">Pending action</p>
+              </div>
+            </div>
+            <!-- --------desktop code for task table------------- -->
+          </div>
+          <table class="task-table">
+            <tr class="heading">
+              <td>Task</td>
+              <td>Category</td>
+              <td>Due date</td>
+              <td>Status</td>
+            </tr>
+            <tr>
+              <td>
+                Update Tax Document<br />
+                for Alphalinx...
+              </td>
+              <td>Compliance</td>
+              <td>23/11/23</td>
+              <td><span class="sp">Request sent</span></td>
+            </tr>
+            <tr>
+              <td>
+                Update KYC<br />
+                document
+              </td>
+              <td>Compliance</td>
+              <td>23/11/23</td>
+              <td><span class="sp">Request sent</span></td>
+            </tr>
+            <tr>
+              <td>
+                Add clearer photo for<br />
+                visa application
+              </td>
+              <td>Visa center</td>
+              <td>23/11/23</td>
+              <td><span class="sp">Pending Action</span></td>
+            </tr>
+            <tr>
+              <td>
+                Document not clear:<br />
+                please add new file
+              </td>
+              <td>Visa center</td>
+              <td>23/11/23</td>
+              <td><span class="sp">Pending Action</span></td>
+            </tr>
+          </table>
+        </div>
+        <div class="payment-m">
+          <h1>
+            Transaction history<span><a href="#">View all</a></span>
+          </h1>
+          <div class="payment-1">
+            <div class="pay" onclick="toggleDescription(this)">
+              <span class="paymentid">#764657758</span>
+              <span class="amount">$5.99</span
+              ><img src="assets/arrow_open.svg" class="arrow" />
+            </div>
+            <span class="pay-date">23/01/19</span>
+
+            <div class="pay-description">
+              <span class="desc-head">Description</span>
+              <span class="desc-body">Mailbox</span>
+            </div>
+            <span class="hr-line"></span>
+          </div>
+
+          <div class="payment-1">
+            <div class="pay" onclick="toggleDescription(this)">
+              <span class="paymentid">#764657758</span>
+              <span class="amount">$99</span
+              ><img src="assets/arrow_open.svg" class="arrow" />
+            </div>
+            <span class="pay-date">23/01/19</span>
+            <div class="pay-description">
+              <span class="desc-head">Description</span>
+              <span class="desc-body">Registration(upgrade)</span>
+            </div>
+            <span class="hr-line"></span>
+          </div>
+          <div class="payment-1">
+            <div class="pay" onclick="toggleDescription(this)">
+              <span class="paymentid">#764657758</span>
+              <span class="amount">$5.99</span
+              ><img src="assets/arrow_open.svg" class="arrow" />
+            </div>
+            <span class="pay-date">21/01/19</span>
+            <div class="pay-description">
+              <span class="desc-head">Description</span>
+              <span class="desc-body">Mailbox</span>
+            </div>
+            <span class="hr-line"></span>
+          </div>
+          <div class="payment-1">
+            <div class="pay" onclick="toggleDescription(this)">
+              <span class="paymentid">#764657758</span>
+              <span class="amount">$5.99</span
+              ><img src="assets/arrow_open.svg" class="arrow" />
+            </div>
+            <span class="pay-date">21/01/19</span>
+            <div class="pay-description">
+              <span class="desc-head">Description</span>
+              <span class="desc-body">Mailbox</span>
+            </div>
+            <span class="hr-line"></span>
+          </div>
+          <div class="payment-1">
+            <div class="pay" onclick="toggleDescription(this)">
+              <span class="paymentid">#764657758</span>
+              <span class="amount">$5.99</span
+              ><img src="assets/arrow_open.svg" class="arrow" />
+            </div>
+            <span class="pay-date">19/01/19</span>
+            <div class="pay-description">
+              <span class="desc-head">Description</span>
+              <span class="desc-body">Mailbox</span>
+            </div>
+            <span class="hr-line"></span>
+          </div>
+          <div class="payment-1">
+            <div class="pay" onclick="toggleDescription(this)">
+              <span class="paymentid">#764657758</span>
+              <span class="amount">$5.99</span
+              ><img src="assets/arrow_open.svg" class="arrow" />
+            </div>
+            <span class="pay-date">15/01/19</span>
+            <div class="pay-description">
+              <span class="desc-head">Description</span>
+              <span class="desc-body">Mailbox</span>
+            </div>
+          </div>
+        </div>
+        <div class="payment">
+          <h1>
+            Payment history<span><a href="#">View all</a></span>
+          </h1>
+          <table class="payment-table">
+            <tr class="heading">
+              <td>Transaction ID</td>
+              <td>Date of transaction</td>
+              <td>Amount</td>
+              <td>Description</td>
+            </tr>
+            <tr>
+              <td style="font-weight: 600; font-size: 14px">#764657758</td>
+              <td>23/01/19</td>
+              <td>$5.99</td>
+              <td>Mailbox</td>
+            </tr>
+            <tr>
+              <td style="font-weight: 600; font-size: 14px">#764657758</td>
+              <td>22/01/19</td>
+              <td>$99</td>
+              <td>Registration(upgrade)</td>
+            </tr>
+            <tr>
+              <td style="font-weight: 600; font-size: 14px">#764657758</td>
+              <td>21/01/19</td>
+              <td>$5.99</td>
+              <td>Mailbox</td>
+            </tr>
+            <tr>
+              <td style="font-weight: 600; font-size: 14px">#764657758</td>
+              <td>19/01/19</td>
+              <td>$5.99</td>
+              <td>Mailbox</td>
+            </tr>
+            <tr>
+              <td style="font-weight: 600; font-size: 14px">#764657758</td>
+              <td>09/01/19</td>
+              <td>$5.99</td>
+              <td>Mailbox</td>
+            </tr>
+            <tr>
+              <td style="font-weight: 600; font-size: 14px">#764657758</td>
+              <td>23/12/18</td>
+              <td>$5.99</td>
+              <td>Mailbox</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./script.js"></script>
+    <script>
+      const ctx = document.getElementById("doughnutChart").getContext("2d");
+      const doughnutChart = new Chart(ctx, {
+        type: "doughnut",
+        data: {
+          labels: ["Incomplete", "Pending approval", "Approved"],
+          datasets: [
+            {
+              data: [5, 3, 13], // Replace with dynamic values
+              backgroundColor: ["#FFA500", "#FF6347", "#32CD32"],
+              borderWidth: 0,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          cutout: "70%",
+          plugins: {
+            legend: {
+              display: false,
+            },
+          },
+        },
+      });
+
+      // Function to update chart data
+      function updateChart(incomplete, pending, approved) {
+        doughnutChart.data.datasets[0].data = [incomplete, pending, approved];
+        doughnutChart.update();
+      }
+
+      // Example: Update chart with new data
+      updateChart(7, 5, 9);
+    </script>
+  </body>
+</html>
