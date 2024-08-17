@@ -17,24 +17,23 @@ function toggleDescription(element) {
     arrow.src = "assets/arrow_open.svg";
     line.style.display = "block";
     parentContainer.style.backgroundColor = "#fff";
-    parentContainer.style.width='100%'
+    parentContainer.style.width = "100%";
     // Show the line when the description is hidden
   }
 }
 
 function toggleSidebar() {
-    const sidebar = document.querySelector('.sidebar');
-    sidebar.classList.toggle('collapsed');
-  }
+  const sidebar = document.querySelector(".sidebar");
+  sidebar.classList.toggle("collapsed");
+}
 
-  function toggleSidebarm() {
-    const sidebar = document.querySelector('.sidebar');
-    if (sidebar.style.display === 'block' || sidebar.classList.contains('show')) {
-      sidebar.style.display = 'none';
-      sidebar.classList.remove('show');
-    } else {
-      sidebar.style.display = 'block';
-      sidebar.classList.add('show');
-    }
+function toggleSidebarm() {
+  const sidebar = document.querySelector(".sidebar");
+  if (sidebar.style.display === "block" || sidebar.classList.contains("show")) {
+    sidebar.style.display = "none";
+    sidebar.classList.remove("show");
+  } else {
+    sidebar.style.display = "block";
+    sidebar.classList.add("show");
   }
-  
+}

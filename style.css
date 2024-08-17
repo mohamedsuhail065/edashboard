@@ -9,6 +9,7 @@
   display: flex;
   font-family: Inter;
 }
+/* -------sidebar styling-------- */
 
 .sidebar {
   background-color: #0f1738;
@@ -18,9 +19,8 @@
   color: #fff;
   position: relative;
 }
-
+/* collapsed sidebar */
 .sidebar.collapsed {
-  /* Width when collapsed */
   align-items: center;
 }
 
@@ -37,13 +37,16 @@
 .sidebar.collapsed .s-noti p,
 .sidebar.collapsed .s-help p,
 .sidebar.collapsed .user-info {
-  display: none; /* Hide all text elements when collapsed */
+  display: none;
 }
 
 .sidebar.collapsed .expand,
 .sidebar.collapsed .expand_user {
-  display: none; /* Hide additional icons and expanders when collapsed */
+  display: none;
 }
+
+/* sidebar contents */
+
 
 .s1 {
   display: flex;
@@ -86,15 +89,15 @@
   margin-top: 27px;
   margin-left: 54.35px;
   margin-right: 24px;
-  display: none; /* Hidden by default */
+  display: none; 
 }
 
 .sidebar.collapsed .menu_o {
-  display: none; /* Hide when collapsed */
+  display: none; 
 }
 
 .sidebar.collapsed .menu_expand {
-  display: block; /* Show the expand icon when collapsed */
+  display: block;
 }
 
 .sidebar.collapsed .s1 .grain,
@@ -311,6 +314,8 @@
   text-align: left;
 }
 
+/* middle part styling */
+
 .middle {
   height: 1019px;
   background-color: #f8f9ff;
@@ -349,6 +354,8 @@
   margin-top: 3.14%;
   display: flex;
 }
+
+
 
 .document-status-container {
   position: relative;
@@ -451,6 +458,8 @@
   left: 0.937rem;
 }
 
+/* dougnut chart */
+
 .gradient-rectangle-2 {
   height: 17.86%;
   background-image: linear-gradient(
@@ -499,6 +508,8 @@
   font-weight: 400;
   color: white;
 }
+
+/* mailbox */
 
 .mailbox {
   height: 155px;
@@ -787,6 +798,8 @@
   margin-top: 10%;
 }
 
+/* right part */
+
 .right {
   padding: 40px 40px 90px 40px;
   width: 50%;
@@ -980,6 +993,8 @@
   display: none;
 }
 
+/* -----------responsive code---------- */
+
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -994,7 +1009,9 @@
     display: block;
     height: 88px;
     background-color: #0f1738;
-    position: relative;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
   }
 
   .nav {
@@ -1022,17 +1039,17 @@
     cursor: pointer;
   }
 
+  /* ------sidebar ------ */
   .sidebar {
     position: fixed;
     top: 0;
     right: 0;
-   /* Adjust as needed */
     height: 100%;
     background-color: #0f1738;
     color: #fff;
-    transform: translateX(-100%); /* Hide sidebar off-screen */
-    transition: transform 0.3s ease; /* Smooth transition for sliding effect */
-    z-index: 1000; /* Ensure it is above other content */
+    transform: translateX(-100%); 
+    transition: transform 0.3s ease; 
+    z-index: 1000; 
     margin-top: 50px;
   }
 
@@ -1104,7 +1121,7 @@
   }
 
   .legal-compliance .lc-1 {
-    margin-left: 50.7%;
+    margin-left: 42.7%;
   }
 
   .right {
@@ -1188,7 +1205,7 @@
     font-weight: 500;
     line-height: 15.6px;
     text-align: left;
-    margin-right: 60%;
+    margin-right: 70%;
     color: #6a6a6d;
   }
 
